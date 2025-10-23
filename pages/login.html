@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Faça login na ONG Connect - Acesse sua conta de voluntário, doador ou organização">
+    <title>Login - ONG Connect</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/login.css">
+    <script defer src="../src/global.js"></script>
+    <script defer src="../src/login.js"></script>
+</head>
+<body>
+    <!-- Header e Navegação -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="./index.html" class="logo">ONG Connect</a>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="./index.html" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="./projetos.html" class="nav-link">Projetos</a></li>
+                    <li class="nav-item"><a href="./cadastro.html" class="nav-link">Cadastre-se</a></li>
+                    <li class="nav-item"><a href="./login.html" class="nav-link active">Login</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <section class="login-container">
+            <div class="container">
+                <div class="login-card">
+                    <div class="login-header">
+                        <div class="login-logo">ONG Connect</div>
+                        <h1>Bem-vindo de volta</h1>
+                        <p>Faça login em sua conta para continuar</p>
+                    </div>
+
+                    <div class="user-type-selector">
+                        <button type="button" class="user-type-btn active" data-type="volunteer">Voluntário</button>
+                        <button type="button" class="user-type-btn" data-type="donor">Doador</button>
+                        <button type="button" class="user-type-btn" data-type="organization">Organização</button>
+                    </div>
+
+                    <form id="login-form">
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" class="form-control" placeholder="seu@email.com" required>
+                            <div class="error-message">Por favor, insira um e-mail válido</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Senha</label>
+                            <div class="password-container">
+                                <input type="password" id="password" class="form-control" placeholder="Sua senha" required>
+                            </div>
+                            <div class="error-message">Por favor, insira sua senha</div>
+                        </div>
+
+                        <div class="login-options">
+                            <div class="remember-me">
+                                <input type="checkbox" id="remember-me">
+                                <label for="remember-me">Lembrar-me</label>
+                            </div>
+                            <a href="#" class="forgot-password" id="forgot-password">Esqueci minha senha</a>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                Entrar
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="divider">
+                        <span>ou entre com</span>
+                    </div>
+
+                    <div class="social-login">
+                        <button type="button" class="social-btn google">
+                            <span>Google</span>
+                        </button>
+                        <button type="button" class="social-btn facebook">
+                            <span>Facebook</span>
+                        </button>
+                    </div>
+
+                    <div class="register-link">
+                        Não tem uma conta? <a href="cadastro.html">Cadastre-se agora</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de recuperação de senha -->
+    <div class="modal" id="password-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <h2 style="margin-bottom: 20px; color: var(--primary);">Recuperar Senha</h2>
+            <p style="margin-bottom: 20px; color: var(--gray);">
+                Digite seu e-mail cadastrado e enviaremos um link para redefinir sua senha.
+            </p>
+            <form id="password-recovery-form">
+                <div class="form-group">
+                    <label for="recovery-email">E-mail</label>
+                    <input type="email" id="recovery-email" class="form-control" placeholder="seu@email.com" required>
+                    <div class="error-message">Por favor, insira um e-mail válido</div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        Enviar Link de Recuperação
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ONG Connect</h3>
+                    <p>Conectando organizações, voluntários e doadores para transformar realidades sociais.</p>
+                    <div class="social-links mt-20">
+                        <a href="https://www.facebook.com/" aria-label="Facebook">Facebook</a>
+                        |
+                        <a href="https://www.instagram.com/" aria-label="Instagram">Instagram</a>
+                        |
+                        <a href="https://x.com/" aria-label="Twitter">Twitter</a>
+                        |
+                        <a href="https://www.linkedin.com/" aria-label="LinkedIn">LinkedIn</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <a href="./index.html">Início</a>
+                    |
+                    <a href="./projetos.html">Projetos</a>
+                    |
+                    <a href="./cadastro.html">Cadastre-se</a>
+                    |
+                    <a href="./login.html">Login</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li>Email: contato@ongconnect.org</li>
+                        <li>Telefone: (11) 1234-5678</li>
+                        <li>Endereço: Rua das ONGs, 123 - São Paulo, SP</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 ONG Connect. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>
